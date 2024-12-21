@@ -191,3 +191,11 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 exec --no-startup-id ibus-daemon -drx
 bindsym Right+Mod1 exec ibus-toggle
+
+# From https://samiulsblog.com/screenshot-on-i3wm
+# Set a custom variable to invoke our script. Makes it easy to refer.
+set $i3screenshot sh ~/.config/i3/screenshot.sh
+
+bindsym Print exec --no-startup-id $i3screenshot full
+bindsym Shift+Print exec --no-startup-id $i3screenshot select
+bindsym $mod+Print exec --no-startup-id $i3screenshot window
