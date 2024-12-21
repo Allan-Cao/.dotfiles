@@ -18,7 +18,7 @@ fc-cache -fv
 
 Packages required (Ubuntu 24.04)
 ```bash
-sudo apt-get install i3 stow feh polybar pulseaudio-utils ibus-hangul
+sudo apt-get install i3 stow feh polybar pulseaudio-utils ibus-hangul maim xdotool xclip
 ```
 
 List connected monitors
