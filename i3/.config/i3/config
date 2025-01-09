@@ -199,3 +199,6 @@ set $i3screenshot sh ~/.config/i3/screenshot.sh
 bindsym Print exec --no-startup-id $i3screenshot full
 bindsym Shift+Print exec --no-startup-id $i3screenshot select
 bindsym $mod+Print exec --no-startup-id $i3screenshot window
+
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -d intel_backlight s +20
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl -d intel_backlight s 20-
