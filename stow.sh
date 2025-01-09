@@ -2,7 +2,7 @@
 
 set -e
 
-STOW_FOLDERS="i3,alacritty,polybar"
+STOW_FOLDERS="i3,alacritty,polybar,xorg"
 
 # Stow each folder
 for folder in $(echo "$STOW_FOLDERS" | tr ',' ' '); do
