@@ -183,9 +183,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec_always xrandr --output DP-1 --rotate left --left-of eDP-1
+exec_always --no-startup-id ~/.config/i3/display-manager.sh
 
-exec_always feh --bg-fil ~/Downloads/wallhaven-gpl8d3_1920x1080.png
+exec_always feh --bg-fil ~/Downloads/wallhaven-lqz9w2_1920x1080.png
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
