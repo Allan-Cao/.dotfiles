@@ -49,7 +49,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+# bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -204,3 +204,5 @@ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -d intel_backligh
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl -d intel_backlight s 20-
 
 exec_always --no-startup-id xmodmap ~/.config/i3/.xmodmap
+
+bindsym $mod+Return exec --no-startup-id ~/.config/i3/alacritty.sh
