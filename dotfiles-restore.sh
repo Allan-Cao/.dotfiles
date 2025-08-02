@@ -35,3 +35,14 @@ sudo ufw default deny incoming
 sudo ufw enable
 
 sudo systemctl enable --now bluetooth docker tlp ufw
+
+if ! command -v zsh; then
+	echo "Installing ohmyzsh..."
+	sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/main/tools/install.sh)"
+fi
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions 2>/dev/null || true
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting 2>/dev/null || true
+
+# Set up Neovim
+echo "Setting up Neovim..."
+./setup-neovim.sh
