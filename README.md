@@ -1,32 +1,21 @@
 # .dotfiles
 
-Collection of my currently used .dotfiles. Nothing too crazy. Mainly documenting for myself when things break.
+Collection of my currently used configurations. Nothing too crazy. Mainly documenting for myself when things break.
 
-### Currently used tools
+### Tools 
 - [i3](https://i3wm.org/)
 - [polybar](https://github.com/polybar/polybar)
 - [alacritty](https://alacritty.org/)
 
 ### Setup Notes
+Since `iwd` is being used, other network supplicants need to be disabled
 
-Install font
 ```bash
-mkdir -p ~/.fonts
-unzip JetBrainsMono.zip -d ~/.fonts
-fc-cache -fv
-```
+sudo systemctl disable NetworkManager
+sudo systemctl disable systemd-networkd```
 
-Packages required (Ubuntu 24.04)
-```bash
-sudo apt-get install i3 stow feh polybar pulseaudio-utils ibus-hangul maim xdotool xclip brightnessctl pavucontrol
-```
+### Usage Notes
 
-List connected monitors
 ```bash
-xrandr -q | grep " connected"
-```
-
-Configure Hangul input
-```bash
-ibus-setup
+udisksctl mount -b /dev/sda1
 ```
