@@ -6,12 +6,14 @@ dmenu
 docker
 docker-buildx
 docker-compose
+fcitx5-chinese-addons
+fcitx5-hangul
+fcitx5-im
+fcitx5-mozc
 feh
 i3lock
 i3status
 i3-wm
-ibus
-ibus-mozc
 intel-media-driver
 intel-ucode
 keepassxc

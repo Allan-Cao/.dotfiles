@@ -1,0 +1,145 @@
+# Alacritty Terminal Configuration
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+opacity = 0.95
+blur = true
+padding = { x = 4, y = 4 }
+dynamic_padding = true
+decorations = "full"
+startup_mode = "Windowed"
+title = "Alacritty"
+dynamic_title = true
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
+size = 9.0
+
+[font.offset]
+x = 0
+y = 1
+
+# Nord Color Scheme
+[colors]
+# Primary colors
+[colors.primary]
+background = "#2E3440"
+foreground = "#D8DEE9"
+dim_foreground = "#A5ABB6"
+
+# Cursor colors
+[colors.cursor]
+text = "#2E3440"
+cursor = "#D8DEE9"
+
+# Vi mode cursor colors
+[colors.vi_mode_cursor]
+text = "#2E3440"
+cursor = "#D8DEE9"
+
+# Selection colors
+[colors.selection]
+text = "CellForeground"
+background = "#4C566A"
+
+# Search colors
+[colors.search.matches]
+foreground = "#2E3440"
+background = "#EBCB8B"
+
+[colors.search.focused_match]
+foreground = "#2E3440"
+background = "#A3BE8C"
+
+# Normal colors
+[colors.normal]
+black = "#3B4252"
+red = "#BF616A"
+green = "#A3BE8C"
+yellow = "#EBCB8B"
+blue = "#81A1C1"
+magenta = "#B48EAD"
+cyan = "#88C0D0"
+white = "#E5E9F0"
+
+# Bright colors
+[colors.bright]
+black = "#4C566A"
+red = "#BF616A"
+green = "#A3BE8C"
+yellow = "#EBCB8B"
+blue = "#81A1C1"
+magenta = "#B48EAD"
+cyan = "#8FBCBB"
+white = "#ECEFF4"
+
+# Dim colors
+[colors.dim]
+black = "#373E4D"
+red = "#94545D"
+green = "#809575"
+yellow = "#B29E75"
+blue = "#68809A"
+magenta = "#8C738C"
+cyan = "#6D96A5"
+white = "#AEB3BB"
+
+[bell]
+animation = "EaseOutExpo"
+duration = 0
+color = "#FFFFFF"
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+save_to_clipboard = true
+
+[cursor]
+style = { shape = "Block", blinking = "Off" }
+unfocused_hollow = true
+thickness = 0.15
+
+[terminal]
+osc52 = "CopyPaste"
+
+[mouse]
+hide_when_typing = true
+
+[[mouse.bindings]]
+mouse = "Middle"
+action = "PasteSelection"
+
+[keyboard]
+bindings = [
+    # Copy/Paste
+    { key = "C", mods = "Control|Shift", action = "Copy" },
+    { key = "V", mods = "Control|Shift", action = "Paste" },
+    
+    # Font size
+    { key = "Plus", mods = "Control", action = "IncreaseFontSize" },
+    { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
+    { key = "Key0", mods = "Control", action = "ResetFontSize" },
+]
+
+[hints]
+# URL hints
+[[hints.enabled]]
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\u0000-\u001f\u007f-\u009f<>\"\\s{-}\\^⟨⟩`]+"
+command = "xdg-open"
+post_processing = true
+mouse.enabled = true
+binding = { key = "U", mods = "Control|Shift" }
+
+[debug]
+render_timer = false
+persistent_logging = false
+log_level = "Warn"
+print_events = false
