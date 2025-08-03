@@ -12,7 +12,8 @@ Since `iwd` is being used, other network supplicants need to be disabled
 
 ```bash
 sudo systemctl disable NetworkManager
-sudo systemctl disable systemd-networkd```
+sudo systemctl disable systemd-networkd
+```
 
 ### Usage Notes
 
