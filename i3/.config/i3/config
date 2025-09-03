@@ -130,9 +130,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Screenshots using maim (X11)
-bindsym Print exec --no-startup-id maim ~/Pictures/screenshot-$(date +'%Y%m%d-%H%M%S').png
-bindsym Shift+Print exec --no-startup-id maim -s ~/Pictures/screenshot-$(date +'%Y%m%d-%H%M%S').png
-bindsym $mod+Print exec --no-startup-id maim -i $(xdotool getactivewindow) ~/Pictures/screenshot-$(date +'%Y%m%d-%H%M%S').png
+bindsym Print exec --no-startup-id maim --hidecursor ~/Pictures/screenshot-$(date +'%Y%m%d-%H%M%S').png
+bindsym Shift+Print exec --no-startup-id maim -s --hidecursor ~/Pictures/screenshot-$(date +'%Y%m%d-%H%M%S').png
+bindsym $mod+Print exec --no-startup-id maim -i --hidecursor $(xdotool getactivewindow) ~/Pictures/screenshot-$(date +'%Y%m%d-%H%M%S').png
 
 # Media control support
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
